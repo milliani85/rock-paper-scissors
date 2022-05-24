@@ -42,5 +42,35 @@ function playRound(playerSelection, computerSelection) {
 
 //Stores the result of the game in the variable result.
 
-let result = playRound(playerSelection, computerSelection);
-console.log(result);
+let roundResult = playRound(playerSelection, computerSelection);
+console.log(roundResult);
+
+//Function thst groups results into win, lose or draw.
+
+function decision(roundResult) {
+    if (roundResult === 'You win! Rock beats Scissors!' 
+        || roundResult === 'You win! Paper beats Rock!' 
+        || roundResult === 'You win! Scissors beats Paper!') {
+        return 'Win'; 
+    } else if (roundResult === 'You lose! Paper beats Rock!' 
+        || roundResult === 'You lose! Scissors beats Paper!' 
+        || roundResult === 'You lose! Rock beats Scissors!') {
+        return 'Lose';    
+    } else if (roundResult === 'You draw! Rock and Rock is a tie'
+        || roundResult === 'You draw! Paper and Paper is a tie'
+        || roundResult === 'You Draw! Scissors and Paper is a tie!') {
+        return 'Draw';
+        }
+          
+}
+
+let gameDecision = decision(roundResult);
+
+//Use a for loop to repeat the game
+
+
+function game() {
+    for(let i = 0; i < 5; i++) {
+        if (gameDecision === 'Win')
+    }
+}
