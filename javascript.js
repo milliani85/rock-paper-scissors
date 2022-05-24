@@ -12,6 +12,12 @@ function computerPlay() {
     return computerSelection;
 }
 
+//Stores the result of compterPlay inside of computerSelection
+
+let computerSelection = computerPlay();
+
+//Function that plays the game.
+
 function playRound(playerSelection, computerSelection) {
     if(playerSelection === 'Rock' && computerSelection === 'Scissors') {
         return 'You win! Rock beats Scissors!';
@@ -31,7 +37,10 @@ function playRound(playerSelection, computerSelection) {
         return 'You lose! Rock beats Scissors!';
     } else if (playerSelection === 'Scissors' && computerSelection === 'Scissors') {
         return 'You Draw! Scissors and Paper is a tie!';
-    }
+    } 
+}    
 
+//Stores the result of the game in the variable result.
 
-}
+let result = playRound(playerSelection, computerSelection);
+console.log(result);
