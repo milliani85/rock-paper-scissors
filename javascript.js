@@ -47,56 +47,32 @@ function playRound() {
 //Plays 5 rounds of Rock, Paper, Scissors.
        
 function game() {
+    playerScore = 0;
+    computerScore = 0;
          for(let i = 0; i < 5; i++) {
             let roundResult = playRound();
             console.log(roundResult);
-         }
-        }
+         if (roundResult === 'You win! Rock beats Scissors!' ||
+            roundResult === 'You win! Paper beats Rock!' ||
+            roundResult === 'You win! Scissors beats Paper!') {
+                playerScore = playerScore + 1;
+                console.log('Player Score ' + playerScore,  ' - ', 'Computer Score ' + computerScore);
+        } else if (roundResult === 'You lose! Paper beats Rock!' ||
+                   roundResult === 'You lose! Scissors beats Paper!' ||
+                   roundResult === 'You lose! Rock beats Scissors!') {
+                       computerScore = computerScore + 1;
+                       console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
+        } else {console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
+        } 
+    }
+}
 
     game();
 
-
-//Stores the result of the game in the variable result.
-
-// let roundResult = playRound();
-// console.log(roundResult);
-
-//Function thst groups results into win, lose or draw.
-
-// function decision(roundResult) {
-//     if (roundResult === 'You win! Rock beats Scissors!' 
-//         || roundResult === 'You win! Paper beats Rock!' 
-//         || roundResult === 'You win! Scissors beats Paper!') {
-//         return 'Win'; 
-//     } else if (roundResult === 'You lose! Paper beats Rock!' 
-//         || roundResult === 'You lose! Scissors beats Paper!' 
-//         || roundResult === 'You lose! Rock beats Scissors!') {
-//         return 'Lose';    
-//     } else if (roundResult === 'You draw! Rock and Rock is a tie'
-//         || roundResult === 'You draw! Paper and Paper is a tie'
-//         || roundResult === 'You Draw! Scissors and Paper is a tie!') {
-//         return 'Draw';
-//         }
-          
-// } 
-
-// let gameDecision = decision(roundResult);
-
-// //Score tally variables.
-
-// let playerScore = 0
-// let computerScore = 0
-
-// //Use a for loop to repeat the game in the game() function and keep score
-
-// function game() {
-//     for(let i = 0; i < 5; i++) {
-//         if(i < 5 && gameDecision === 'Win') {
-//             playerScore = playerScore + 1;
-//         } else if (i < 5 && gameDecision === 'Lose') {
-//             computerScore = computerScore + 1;
-//         } else if (i < 5 && gameDecision === 'Draw') {
-//         }
-//     }
-// } 
-
+    if (playerScore > computerScore) {
+        console.log('Well done, you win!');
+    } else if (playerScore < computerScore) {
+        console.log('Unlucky, you lose!');
+    } else {
+    console.log('This match is a draw!');
+    }
