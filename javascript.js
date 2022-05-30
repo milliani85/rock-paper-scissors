@@ -17,9 +17,8 @@ function computerPlay() {
 }
 
 
-/*Function that plays the game. Not sure if the playerSelection + computerPlay is best practice? 
-Should I use a callfunction, tried this but kept seeing playerSelection not defined
-*/
+//Function that plays the game.
+
 function playRound() {
     playerSelection = playerPlay();
     computerSelection = computerPlay();
@@ -62,12 +61,14 @@ function game() {
                    roundResult === 'You lose! Rock beats Scissors!') {
                        computerScore = computerScore + 1;
                        console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
-        } else {console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
+        } else { console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
         } 
     }
 }
 
     game();
+
+    //Gives the final result
 
     if (playerScore > computerScore) {
         console.log('Well done, you win!');
