@@ -54,12 +54,12 @@ function game() {
          if (roundResult === 'You win! Rock beats Scissors!' ||
             roundResult === 'You win! Paper beats Rock!' ||
             roundResult === 'You win! Scissors beats Paper!') {
-                playerScore = playerScore + 1;
+                playerScore += 1;
                 console.log('Player Score ' + playerScore,  ' - ', 'Computer Score ' + computerScore);
         } else if (roundResult === 'You lose! Paper beats Rock!' ||
                    roundResult === 'You lose! Scissors beats Paper!' ||
                    roundResult === 'You lose! Rock beats Scissors!') {
-                       computerScore = computerScore + 1;
+                       computerScore += 1;
                        console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
         } else { console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
         } 
@@ -75,5 +75,5 @@ function game() {
     } else if (playerScore < computerScore) {
         console.log('Unlucky, you lose!');
     } else {
-    console.log('This match is a draw!');
+        console.log('This match is a draw!');
     }
