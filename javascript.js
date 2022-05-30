@@ -2,9 +2,9 @@
 
 function playerPlay() {
     let playerSelection = prompt('Player, choose your weapon');
-    playerSelection = playerSelection.charAt(0).toUpperCase() + 
+    return playerSelection.charAt(0).toUpperCase() + 
                   playerSelection.slice(1).toLowerCase();
-    return playerSelection;              
+                 
 }     
 
 
@@ -12,8 +12,8 @@ function playerPlay() {
 
 function computerPlay() {
     let computerOptions = ['Rock', 'Paper', 'Scissors'];
-    let computerSelection = computerOptions[Math.floor(Math.random() * computerOptions.length)];
-    return computerSelection;
+    return computerOptions[Math.floor(Math.random() * computerOptions.length)];
+    
 }
 
 
