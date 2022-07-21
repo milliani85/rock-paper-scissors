@@ -28,29 +28,38 @@ function computerPlay() {
 function playRound() {
     computerSelection = computerPlay();
     if(playerSelection === 'Rock' && computerSelection === 'Scissors') {
-        console.log('You win! Rock beats Scissors!');
+      const container = document.querySelector('#result');
+        container.textContent = 'You win! Rock beats Scissors!';
     } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
-        console.log('You lose! Paper beats Rock!');
+        const container = document.querySelector('#result');
+          container.textContent = 'You lose! Paper beats Rock!';
     } else if (playerSelection === 'Rock' && computerSelection === 'Rock') {
-        console.log('You draw! Rock and Rock is a tie');
+        const container = document.querySelector('#result');
+          container.textContent = 'You draw! Rock and Rock is a tie!';
     } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
-        console.log('You win! Paper beats Rock!');
+        const container = document.querySelector('#result');
+          container.textContent = 'You win! Paper beats Rock!';
     } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
-        console.log('You lose! Scissors beats Paper!');
+        const container = document.querySelector('#result');
+          container.textContent = 'You lose! Scissors beats Paper!';
     } else if (playerSelection === 'Paper' && computerSelection === 'Paper') {
-        console.log('You draw! Paper and Paper is a tie');
+        const container = document.querySelector('#result');
+          container.textContent = 'You draw! Paper and Paper is a tie';
     } else if(playerSelection === 'Scissors' && computerSelection === 'Paper') {
-        console.log('You win! Scissors beats Paper!');   
+        const container = document.querySelector('#result');
+          container.textContent = 'You win! Scissors beats Paper!';   
     } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
-        console.log('You lose! Rock beats Scissors!');
+        const container = document.querySelector('#result');
+          container.textContent ='You lose! Rock beats Scissors!';
     } else if (playerSelection === 'Scissors' && computerSelection === 'Scissors') {
-        console.log('You Draw! Scissors and Paper is a tie!');
+        const container = document.querySelector('#result');
+          container.textContent ='You draw! Scissors and Paper is a tie!';
     } 
 }    
 
 //Plays 5 rounds of Rock, Paper, Scissors.
        
-/*function game() {
+function game() {
     playerScore = 0;
     computerScore = 0;
             console.log(roundResult);
@@ -69,7 +78,7 @@ function playRound() {
     }
 
 
-    */
+    
 
     //Gives the final result
 
