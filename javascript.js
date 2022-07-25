@@ -7,12 +7,11 @@ let computerScore = 0;
 let buttons = document.querySelectorAll('.buttons');
 buttons.forEach((button => {
     button.addEventListener ('click', () => {
-        playerSelection = button.innerHTML;
+        playerSelection = button.innerText;
         playRound();
     })
 
 }))
-
 
 //Function that asks computer for a random selection.
 
@@ -21,6 +20,10 @@ function computerPlay() {
     return computerOptions[Math.floor(Math.random() * computerOptions.length)];
 }
 
+//Play again button.
+
+const resetBtn = document.querySelector('.reset');
+resetBtn.addEventListener('click',() => location.reload());
 
 
 //Function that plays the game.
@@ -71,40 +74,41 @@ function playRound() {
                 cScore.innerHTML = computerScore;
     } else if (playerSelection === 'Scissors' && computerSelection === 'Scissors') {
         const container = document.querySelector('#result');
-          container.textContent ='You draw! Scissors and Paper is a tie!';
+          container.textContent ='You draw! Scissors and Scissors is a tie!';
     } 
-}    
-
-//Plays 5 rounds of Rock, Paper, Scissors.
-       
-/*function game() {
-    playerScore = 0;
-    computerScore = 0;
-            console.log(roundResult);
-         if (roundResult === 'You win! Rock beats Scissors!' ||
-            roundResult === 'You win! Paper beats Rock!' ||
-            roundResult === 'You win! Scissors beats Paper!') {
-                playerScore += 1;
-                console.log('Player Score ' + playerScore,  ' - ', 'Computer Score ' + computerScore);
-        } else if (roundResult === 'You lose! Paper beats Rock!' ||
-                   roundResult === 'You lose! Scissors beats Paper!' ||
-                   roundResult === 'You lose! Rock beats Scissors!') {
-                       computerScore += 1;
-                       console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
-        } else { console.log('Player Score ' + playerScore, ' - ', 'Computer Score ' + computerScore);
-        } 
-    }
-*/
-
+    if (playerScore > computerScore && playerScore === 5) {
+        const container = document.querySelector('#result');
+          container.textContent ='Well done! You are the champ!';
+    } else if (playerScore < computerScore && computerScore === 5) {
+        const container = document.querySelector('#result');
+          container.textContent ='Oh no you lose! Better luck next time!';
+    } 
     
+    //Updates score board
+    
+    if (playerScore === 5 || computerScore === 5) {
+          const pScore = document.querySelector('#player-score');
+            pScore.innerHTML = playerScore;
+          const cScore = document.querySelector('#computer-score');
+            cScore.innerHTML = computerScore;
+            disableButtons();
+    }    
 
-    //Gives the final result
 
-   /* if (playerScore > computerScore) {
-        console.log('Well done, you win!');
-    } else if (playerScore < computerScore) {
-        console.log('Unlucky, you lose!');
-    } else {
-        console.log('This match is a draw!');
-    }
-*/
+    //Disables buttons once game has finished
+
+   function disableButtons() {
+     buttons.forEach(button => {
+      button.disabled = true
+  })
+}}
+
+
+
+  
+
+
+
+
+  
+

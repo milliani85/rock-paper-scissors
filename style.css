@@ -1,0 +1,105 @@
+body {
+    background-color: #292424;
+    color: rgb(235, 225, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.buttons {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 0pt;
+    margin: 20px;
+    
+}
+
+img {
+
+    width: 140px;
+    height: 140px; 
+
+}
+
+.result-container {
+    height: 50px;
+    font-size: 30px;
+}
+
+.score-container {
+    display: flex;
+    font-weight: bold;
+    margin: 40px 10px 0px 10px;
+    
+    
+}
+
+.main-player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+
+}
+
+.player-container {
+    border: 2px solid rgb(235, 225, 225);
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+   
+
+}
+
+
+#player-score {
+    font-size: 80px;
+   
+}
+
+.main-comp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    
+}
+
+
+.computer-container {
+    border:2px solid rgb(235, 225, 225);
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  
+}
+
+#computer-score {
+    font-size: 80px;
+   
+}
+
+.reset {
+    height: 60px;
+    color: #292424;
+    width: 150px;
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px;
+    font-size: large;
+    font-weight: bold;
+}

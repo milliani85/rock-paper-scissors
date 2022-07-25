@@ -4,21 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
     <script src="javascript.js" defer></script>
 </head>
 <body>
-    <button class = "buttons">Rock</button>
-    <button class = "buttons">Paper</button>
-    <button class = "buttons">Scissors</button>
-    <div>
-      <p>Player Score</p>  
-      <p id = "player-score">0</p> 
-      <p>Computer Score</p>
-      <p id = "computer-score">0</p>
+  <h1>ROCK, PAPER, SCISSORS</h1>
+  <h2>FIRST TO 5 IS THE WINNER</h2>
+  <h3>CHOOSE YOU WEAPON</h3>
+  <div class = "buttons-container">
+    <button class = "buttons">Rock<img src="images/rock.jpg"></button>
+    <button class = "buttons">Paper<img src="images/paper.png"></button>
+    <button class = "buttons">Scissors<img src="images/scissors.png"></button>
+  </div>
+  <div class = "result-container">
+    <p id = "result"></p>
+  </div>
+    <div class = "score-container">
+      <div class = "main-player-container">
+        <p>PLAYER SCORE</p> 
+      <div class = "player-container">
+         
+          <p id = "player-score">0</p> 
+        </div>
+      </div>
+      <div class = "main-comp-container">
+        <p>COMPUTER SCORE</p>
+          <div class = "computer-container">
+            <p id = "computer-score">0</p>
+      </div>
+      </div>
     </div>
-    <div>
-      <p id = "result"></p>
-    </div>
+    <button class = "reset">PLAY AGAIN</button>
+    
 </body>
 </html>
